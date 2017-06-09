@@ -1,0 +1,8 @@
+﻿
+.full-width {
+  width: 300px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 20px;
+  border: 1px solid lightgray;
+}

@@ -1,0 +1,34 @@
+﻿<md-card>
+  <p>Here you can add new video to your list.</p>
+  <p>If you want to add new video paste url from YouTube or it videoID (last 11 charaters of the link). For example, link: </p>
+  <i>https://www.youtube.com/watch?v=MsBB22-kZGM</i>
+  <p>or videoID: </p><i>MsBB22-kZGM</i>
+
+</md-card>
+
+<md-card>
+  <form class=""
+        [formGroup]="addVideoForm"
+        novalidate>
+    <md-input-container>
+      <input mdInput
+             placeholder="Paste url or video ID from YouTube"
+             formControlName="url" />
+    </md-input-container>
+    <div>
+      <button type="button"
+              md-raised-button
+              (click)="goBack()">
+        Back
+      </button>
+      <button type="button"
+              md-raised-button
+              color="warn"
+              (click)="onSubmit()"
+              routerLink="/list"
+              [disabled]="addVideoForm.pristine">
+        Save
+      </button>
+    </div>
+  </form>
+</md-card>

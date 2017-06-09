@@ -1,0 +1,34 @@
+﻿.container {
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  width: 250px;
+}
+
+.item-container {
+  display: inline-block;
+  background-color: aliceblue;
+  width: 100%
+}
+
+.data {
+  margin: 10px;
+  display: inline-block;
+}
+
+.buttons {
+  margin: 10px;
+}
+
+.right-button {
+  float: right;
+}
+
+.select{
+  margin: 10px;
+}
+
+.box-container {
+  overflow: hidden;
+}

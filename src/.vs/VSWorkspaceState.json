@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\components",
+    "\\app\\components\\player",
+    "\\app\\components\\video-form",
+    "\\app\\components\\video-list",
+    "\\app\\core",
+    "\\app\\core\\models",
+    "\\app\\pipes"
+  ],
+  "SelectedNode": "\\app\\app.module.ts",
+  "PreviewInSolutionExplorer": false
+}

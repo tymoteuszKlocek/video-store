@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\components",
+    "\\components\\video-form",
+    "\\components\\video-list",
+    "\\core",
+    "\\core\\models",
+    "\\core\\store",
+    "\\core\\store\\actions",
+    "\\core\\store\\effects",
+    "\\services"
+  ],
+  "SelectedNode": "\\core\\store\\reducers\\reducer.ts",
+  "PreviewInSolutionExplorer": true
+}

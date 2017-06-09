@@ -1,0 +1,24 @@
+﻿<h3 md-line>{{video.info.title}}</h3>
+<div class="thumbnail-container">
+  <img class="thumbnail"
+       (click)="openDialog()"
+       src="{{video.info.imgLinks.thumbnail}}" />
+</div>
+<p md-line>
+  <span> published: {{video.info.date}} </span>
+  <span> author: {{video.info.author}} </span>
+</p>
+<p md-line>
+  <span>{{video.info.views}} views</span>
+</p>
+<div>
+  <button md-raised-button
+          (click)="openDialog()">
+    Watch
+  </button>
+  <button md-raised-button
+          (click)="deleteVideo(video)">
+    Delete
+  </button>
+</div>
+

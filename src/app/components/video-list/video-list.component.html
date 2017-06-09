@@ -1,0 +1,77 @@
+﻿<md-card>
+  <p>
+  Here you can store all your favorite videos in one place. You can simply add new or delete them.
+</p>
+  <md-card-subtitle>
+    <button md-button (click)="list=!list">Grid / List</button>
+    <button color="warn"
+            md-button
+            (click)="removeAllVideos()">
+      Delete all
+    </button>
+  </md-card-subtitle>
+</md-card>
+
+<div *ngIf="list" class='container'>
+  <md-card *ngFor="let video of videos">
+    <div class="item-container">
+      <div class="data">
+        <img class="thumbnail"
+             (click)="openDialog(video.url)"
+             src="{{video.info.imgLinks.thumbnail}}" />
+      </div>
+      <div class="data">
+        <md-card-subtitle>
+          <h3 md-line>{{video.info.title}}</h3>
+          <span><b> Published: </b> {{video.info.date | date}}</span>
+          <span><b>Author:</b>{{video.info.author}} </span>
+          <span><b>Views:</b>{{video.info.views}} </span>
+        </md-card-subtitle>
+      </div>
+      <div class="buttons">
+        <button md-raised-button
+                (click)="openDialog(video.url)">
+          Watch
+        </button>
+        <button md-raised-button
+                (click)="deleteVideo(video)">
+          Delete
+        </button>
+      </div>
+    </div>
+  </md-card>
+  <button class="right-button" routerLink="/add-new" color="primary" md-raised-button>Add New</button>
+
+</div>
+
+<md-grid-list cols="3" rowHeight="400px" *ngIf="!list">
+  <md-grid-tile *ngFor="let video of videos">
+    <md-card>
+      <div class="item-container">
+        <div class="data">
+          <img class="thumbnail"
+               (click)="openDialog()"
+               src="{{video.info.imgLinks.thumbnail}}" />
+        </div>
+        <div class="data">
+          <md-card-subtitle>
+            <h3 md-line>{{video.info.title}}</h3>
+            <span><b> Published: </b> {{video.info.date | date}}</span>
+            <span><b>Author:</b>{{video.info.author}} </span>
+            <span><b>Views:</b>{{video.info.views}} </span>
+          </md-card-subtitle>
+        </div>
+        <div class="buttons">
+          <button md-raised-button
+                  (click)="openDialog(video.url)">
+            Watch
+          </button>
+          <button md-raised-button
+                  (click)="deleteVideo(video)">
+            Delete
+          </button>
+        </div>
+      </div>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
