@@ -3,13 +3,13 @@
     "",
     "\\app",
     "\\app\\components",
-    "\\app\\components\\player",
+    "\\app\\components\\dialog-player",
     "\\app\\components\\video-form",
     "\\app\\components\\video-list",
     "\\app\\core",
     "\\app\\core\\models",
     "\\app\\pipes"
   ],
-  "SelectedNode": "\\app\\app.module.ts",
+  "SelectedNode": "\\app\\components\\dialog-player\\dialog-player.component.css",
   "PreviewInSolutionExplorer": false
 }

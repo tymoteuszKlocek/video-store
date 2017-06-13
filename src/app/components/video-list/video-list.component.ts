@@ -43,17 +43,18 @@ export class VideoListComponent implements OnInit {
 
     ngOnInit() {
         this.state$ = this.store.select('reducer');
-        this.state$.subscribe(v => this.videos = v.videos);
+        this.state$.subscribe(v => {
+            console.log(v)
+            this.videos = v.videos
+        });
     }
 
     deleteVideo(video) {
-        console.log(video);
         this.store.dispatch(new DeleteVideo(video));
     }
 
     removeAllVideos() {
         alert('You will delete all videos. Are you sure?');
-        alert("Please, don't!");
         this.store.dispatch(new RemoveAllVideos());
     }
 
